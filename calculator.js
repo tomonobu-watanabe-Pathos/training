@@ -127,7 +127,7 @@ function PercentageValue(){
         document.getElementById('input').value = 0;
         c=0;
     } else {
-        result = Math.floor(eval((v + document.getElementById('input').value).replace('＋', '+').replace('－', '-').replace('×', '*').replace('÷', '/').replace('--', '+'))*1000000)/100000000
+        result = Math.floor(eval(v + document.getElementById('input').value)*1000000)/100000000
     c=0;
     n=0;
     s=0;
@@ -172,7 +172,7 @@ function SquareRootValue(){
     if(r==1){
         ;
     } else if (document.getElementById('input').value<0){
-        document.getElementById('input').value = '(E)plz non-neg';
+        document.getElementById('input').value = '複素数だよ';
         c=10;
         n=1;
         s=1;
