@@ -153,29 +153,8 @@
         }
         // %を押した時の処理
         function PercentageValue(){
-            if(p==1){
-                document.getElementById('input').value = 0;
-                c=0;
-            } else {
-                result = Math.floor(eval(v.replace('＋', '+').replace('－', '-').replace('×', '*').replace('÷', '/') + document.getElementById('input').value)*1000000)/100000000;
-            c=0;
-            n=0;
-            s=0;
-            d=0;
-            z=0;
-        if (Math.abs(result)>9999999999){
-            document.getElementById('input').value = '(E)'+String(result).slice(0,10)+'...';
-            c=String(result).length;
-            n=1;
-            s=1;
-            d=1;
-            z=1;
-            r=1;
-        } else {
-            document.getElementById('input').value = result;
-        }
-        e=1;
-            }
+            v += document.getElementById('input').value + '*';
+            
         }
         // .を押した時の処理
         function DecimalValue(){
