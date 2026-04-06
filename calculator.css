@@ -7,6 +7,7 @@
     margin: 5px;
     border-radius: 10px;
     cursor: pointer;
+    box-shadow: 0 6px 0 #b3b3b3, 0 8px 10px rgba(0, 0, 0, 0.2);
 }
 .NumberButton:hover{
     background-color: #aaa;
@@ -17,6 +18,8 @@
     background-color: #aaa;
     border-color: #000000;
     color: #fff;
+    box-shadow: 0 3px 0 #b3b3b3, 0 4px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
 }
 
 .ClearButton{
@@ -28,46 +31,24 @@
     border-radius: 10px;
     cursor: pointer;
     background-color: yellow;
+    box-shadow: 0 6px 0 #b3b3b3, 0 8px 10px rgba(0, 0, 0, 0.2);
 }
-/* .SymbolButton{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 60px;
-    font-size: 24px;
-    margin: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.SymbolButton input[type="radio"]{
-    position: absolute;
-}
-.SymbolButton label{
-    display: inline-block;
-    border: 1px solid #000000;
-    width: 60px;
-    height: 60px;
-    font-size: 24px;
-    margin: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.SymbolButton:hover{
-    background-color: #aaa;
+.ClearButton:hover{
+    background-color: #ddd23a;
     border-color: #ccc;
     color: #fff;
 }
-.SymbolButton[aria-pressed="true"]{
-    background-color: #aaa;
+.ClearButton:active{
+    background-color: #ddd23a;
     border-color: #000000;
     color: #fff;
-} */
-
+    box-shadow: 0 3px 0 #b3b3b3, 0 4px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
 .radio-a{
     display: flex;
     justify-content: center;
-    margin-block: 50px;
+    margin-block: 10px;
     gap: 10px;
   }
   .radio-a input[type="radio"]{
@@ -77,35 +58,37 @@
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     overflow: hidden;
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    padding: 0;
   }
   .radio-a label{
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 12px;
-    background-color: #ddd;
-    border: 3px solid #ddd;
-    color: #fff;
-    aspect-ratio: 1 / 1;
-    width: 80px;
+    font-size: 24px;
+    background-color: #eee;
+    border: 2px solid #000;
+    color: #000;
+    height: 58px;
+    width: 58px;
     cursor: pointer;
-    transition: .3s;
+    /* transition: .3s; */
+    border-radius: 10px;
+    box-shadow: 0 6px 0 #b3b3b3, 0 8px 10px rgba(0, 0, 0, 0.2);
   }
   .radio-a input[type="radio"]:checked + label{
-    background-color: #f9920c;
-    border-color: #f9920c;
-    cursor: default;
+    background-color: #aaa;
+    border-color: #000000;
+    color: #fff;
+    box-shadow: 0 3px 0 #b3b3b3, 0 4px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
   }
-  @media (hover: hover){
-    .radio-a li:hover label{
-      border-color: #f9920c;
+  .radio-a input[type="radio"]:hover + label{
+    background-color: #aaa;
+    border-color: #ccc;
+    color: #fff;
+    box-shadow: 0 3px 0 #b3b3b3, 0 4px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
     }
-  }
 input[type="text"]{
     width: 300px;
     height: 60px;

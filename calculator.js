@@ -97,10 +97,11 @@ z=1;
 e=0;
 p=1;
 r=0;
+radioDeselection();
 }
  // =を押した時の処理
  function CalculateValue(){
-    result = Math.floor(eval((v + document.getElementById('input').value).replace('＋', '+').replace('－', '-').replace('×', '*').replace('÷', '/').replace('--', '+'))*100000000)/100000000;
+    result = Math.floor(eval(v + document.getElementById('input').value)*100000000)/100000000;
     c=0;
     n=0;
     s=0;
@@ -118,6 +119,7 @@ if (Math.abs(result)>9999999999){
     document.getElementById('input').value = result;
 }
 e=1;
+radioDeselection();
 }
 // %を押した時の処理
 function PercentageValue(){
@@ -144,6 +146,7 @@ if (Math.abs(result)>9999999999){
 }
 e=1;
     }
+    radioDeselection();
 }
 // .を押した時の処理
 function DecimalValue(){
@@ -177,6 +180,7 @@ function SquareRootValue(){
         z=1;
         p=0;
         r=1;
+        radioDeselection();
     } else {
     result = Math.sqrt(document.getElementById('input').value);
     document.getElementById('input').value = String(result).slice(0,10);
@@ -187,6 +191,7 @@ function SquareRootValue(){
     d=0;
     z=0;
     e=1;
+    radioDeselection();
 }
 }
 // ±を押した時の処理
@@ -197,3 +202,18 @@ function PlusMinusValue(){
         document.getElementById('input').value = document.getElementById('input').value.slice(1);
     }
 }
+// CEを押した時の処理
+function ClearEntry(){
+    if (s==0&&e==0){
+    document.getElementById('input').value = '0';
+    c=0;
+    }
+}
+
+// ラジオボタンのキャンセル
+function radioDeselection() {
+    for (const element of document.getElementsByName('symbol')) {
+      element.checked = false;
+    }
+  }
+  

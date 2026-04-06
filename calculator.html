@@ -11,27 +11,66 @@
         <center>
         <!-- ボタンの作成 -->
         <form name="calculator">
+
         <input type="text" id="input" value="0" size="15" readonly disabled><br><br>
-        <input type="button" value="1" onClick="AppendValue(this)" class="NumberButton">
-        <input type="button" value="2" onClick="AppendValue(this)" class="NumberButton">
-        <input type="button" value="3" onClick="AppendValue(this)" class="NumberButton"> 
-        &ensp; <input type="radio" id="plus" value="＋" onClick="AppendSymbol(this)" name="symbol">
-        <label for="plus">＋</label><br>
-        <input type="button" value="4" onClick="AppendValue(this)" class="NumberButton">
-        <input type="button" value="5" onClick="AppendValue(this)" class="NumberButton">
-        <input type="button" value="6" onClick="AppendValue(this)" class="NumberButton"> &ensp; <input type="radio" name="symbol" value="－" onClick="AppendSymbol(this)" class="SymbolButton"> <br>
-        <input type="button" value="7" onClick="AppendValue(this)" class="NumberButton">
-        <input type="button" value="8" onClick="AppendValue(this)" class="NumberButton">
-        <input type="button" value="9" onClick="AppendValue(this)" class="NumberButton"> &ensp; <input type="radio" name="symbol" value="×" onClick="AppendSymbol(this)" class="SymbolButton"> <br>
-        <input type="button" value="0" onClick="AppendZero()" class="NumberButton">
-        <input type="button" value="00" onClick="AppendZeroZero()" class="NumberButton">
-        <input type="button" value="." onClick="DecimalValue(this)" class="NumberButton">&ensp; <input type="radio" name="symbol" value="÷" onClick="AppendSymbol(this)" class="SymbolButton"> <br>
-        <input type="button" value="±" onClick="PlusMinusValue()" class="NumberButton"> 
-        
-        <input type="button" value="%" onClick="PercentageValue()" class="NumberButton">
-        <input type="button" value="√" onClick="SquareRootValue()" class="NumberButton"> &ensp; <input type="button" value="=" onClick="CalculateValue()" class="NumberButton"> <br>
-        <input type="button" value="C" onClick="ClearValue()" class="ClearButton" style="background-color: yellow;">
-        </form>
+        <p class="radio-a">
+            <input type="button" value="1" onClick="AppendValue(this)" class="NumberButton">
+            <input type="button" value="2" onClick="AppendValue(this)" class="NumberButton">
+            <input type="button" value="3" onClick="AppendValue(this)" class="NumberButton"> 
+            &ensp; 
+            <input type="radio" id="plus" value="+" onClick="AppendSymbol(this)" name="symbol" class="SymbolButton">
+            <label for="plus">＋</label>
+        </p>
+        <p class="radio-a">
+            <input type="button" value="4" onClick="AppendValue(this)" class="NumberButton">
+            <input type="button" value="5" onClick="AppendValue(this)" class="NumberButton">
+            <input type="button" value="6" onClick="AppendValue(this)" class="NumberButton"> 
+            &ensp; 
+            <input type="radio" id="minus" value="-" onClick="AppendSymbol(this)" name="symbol" class="SymbolButton">
+            <label for="minus">－</label>
+        </p>
+        <p class="radio-a">
+            <input type="button" value="7" onClick="AppendValue(this)" class="NumberButton">
+            <input type="button" value="8" onClick="AppendValue(this)" class="NumberButton">
+            <input type="button" value="9" onClick="AppendValue(this)" class="NumberButton"> 
+            &ensp; 
+            <input type="radio" id="multiply" value="*" onClick="AppendSymbol(this)" name="symbol" class="SymbolButton">
+            <label for="multiply">×</label>
+        </p>
+        <p class="radio-a">
+            <input type="button" value="0" onClick="AppendZero()" class="NumberButton">
+            <input type="button" value="00" onClick="AppendZeroZero()" class="NumberButton">
+            <input type="button" value="." onClick="DecimalValue(this)" class="NumberButton">
+            &ensp; 
+            <input type="radio" id="divide" value="/" onClick="AppendSymbol(this)" name="symbol" class="SymbolButton">
+            <label for="divide">÷</label>
+        </p>
+        <p class="radio-a">
+            <input type="button" value="±" onClick="PlusMinusValue()" class="NumberButton"> 
+            <input type="button" value="%" onClick="PercentageValue()" class="NumberButton">
+            <input type="button" value="√" onClick="SquareRootValue()" class="NumberButton"> 
+            &ensp; 
+            <input type="button" value="=" onClick="CalculateValue()" class="NumberButton">
+        </p>
+        <input type="button" value="C" onClick="ClearValue()" class="ClearButton">
+        <input type="button" value="CE" onClick="ClearEntry()" class="ClearButton">
+    </form>
         </center>
+        <!-- <div>
+            電卓の使い方
+            <ul>
+                <li>最初に数字を入力</li>
+                <li>次に演算子（＋、－、×、÷）を入力</li>
+                <li>最後にイコールを入力</li>
+                <li>クリアボタンを押すと電卓をリセット</li>
+            </ul>
+                その他の記号
+            <ul>
+                <li>±：プラスマイナスの反転</li>
+                <li>％：パーセントの計算</li>
+                <li>√：平方根の計算</li>
+            </ul>
+            </ul>
+        </div> -->
   </body>
 </html>
