@@ -14,7 +14,7 @@
         <!-- ボタンの作成 -->
         <form name="calculator">
 
-        <input type="text" id="input" value="0" size="15" readonly disabled><br>
+        <input type="text" id="input" value="0" size="15" readonly disabled><input type="text" id="v" value="" size="15" readonly disabled><br>
         <input type="button" value="1" onClick="AppendValue(this)">
         <input type="button" value="2" onClick="AppendValue(this)">
         <input type="button" value="3" onClick="AppendValue(this)">
@@ -42,7 +42,7 @@
         <input type="button" value="±" onClick="PlusMinusValue()" > 
         <input type="button" value="%" onClick="PercentageValue()" >
         <input type="button" value="√" onClick="SquareRootValue()" > 
-        <input type="button" value="=" onClick="CalculateValue()"  style="border-radius: 10px; height:140px; position: absolute; left: 243px; top: 375px;">
+        <input type="button" value="=" onClick="PressEqual()"  style="border-radius: 10px; height:140px; position: absolute; left: 243px; top: 375px;">
         <br>
         <input type="button" value="C" onClick="ClearValue()" class="ClearButton" style="width:140px">
         <input type="button" value="CE" onClick="ClearEntry()" class="ClearButton">
