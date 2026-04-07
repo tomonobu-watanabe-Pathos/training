@@ -3,49 +3,51 @@
   <head>
     <meta charset="utf-8" />
     <title>calculator</title>
+    <link rel="stylesheet" href="index.css"/>
     <link rel="stylesheet" href="calculator.css"/>
     <script src="calculator.js"></script>
   </head>
   <body>
-    <center><h1>たのしい電卓</h1></center>
+    <div class="bg_pattern Paper_v2""></div>
+    <!-- <center><h1>たのしい電卓</h1></center> -->
         <center>
         <!-- ボタンの作成 -->
         <form name="calculator">
 
         <input type="text" id="input" value="0" size="15" readonly disabled><br><br>
         <p class="radio-a">
-            <input type="button" value="1" onClick="AppendValue(this)" class="NumberButton">
-            <input type="button" value="2" onClick="AppendValue(this)" class="NumberButton">
-            <input type="button" value="3" onClick="AppendValue(this)" class="NumberButton"> 
+            <input type="button" value="1" onClick="AppendValue(this)" class="Button">
+            <input type="button" value="2" onClick="AppendValue(this)" class="Button">
+            <input type="button" value="3" onClick="AppendValue(this)" class="Button"> 
             <input type="radio" id="plus" value="+" onClick="AppendSymbol(this)" name="symbol" class="SymbolButton">
             <label for="plus">＋</label>
         </p>
         <p class="radio-a">
-            <input type="button" value="4" onClick="AppendValue(this)" class="NumberButton">
-            <input type="button" value="5" onClick="AppendValue(this)" class="NumberButton">
-            <input type="button" value="6" onClick="AppendValue(this)" class="NumberButton"> 
+            <input type="button" value="4" onClick="AppendValue(this)" class="Button">
+            <input type="button" value="5" onClick="AppendValue(this)" class="Button">
+            <input type="button" value="6" onClick="AppendValue(this)" class="Button"> 
             <input type="radio" id="minus" value="-" onClick="AppendSymbol(this)" name="symbol" class="SymbolButton">
             <label for="minus">－</label>
         </p>
         <p class="radio-a">
-            <input type="button" value="7" onClick="AppendValue(this)" class="NumberButton">
-            <input type="button" value="8" onClick="AppendValue(this)" class="NumberButton">
-            <input type="button" value="9" onClick="AppendValue(this)" class="NumberButton"> 
+            <input type="button" value="7" onClick="AppendValue(this)" class="Button">
+            <input type="button" value="8" onClick="AppendValue(this)" class="Button">
+            <input type="button" value="9" onClick="AppendValue(this)" class="Button"> 
             <input type="radio" id="multiply" value="*" onClick="AppendSymbol(this)" name="symbol" class="SymbolButton">
             <label for="multiply">×</label>
         </p>
         <p class="radio-a">
-            <input type="button" value="0" onClick="AppendZero()" class="NumberButton">
-            <input type="button" value="00" onClick="AppendZeroZero()" class="NumberButton">
-            <input type="button" value="." onClick="DecimalValue(this)" class="NumberButton">
+            <input type="button" value="0" onClick="AppendZero()" class="Button">
+            <input type="button" value="00" onClick="AppendZeroZero()" class="Button">
+            <input type="button" value="." onClick="DecimalValue(this)" class="Button">
             <input type="radio" id="divide" value="/" onClick="AppendSymbol(this)" name="symbol" class="SymbolButton">
             <label for="divide">÷</label>
         </p>
         <p class="radio-a">
-            <input type="button" value="±" onClick="PlusMinusValue()" class="NumberButton"> 
-            <input type="button" value="%" onClick="PercentageValue()" class="NumberButton">
-            <input type="button" value="√" onClick="SquareRootValue()" class="NumberButton"> 
-            <input type="button" value="=" onClick="CalculateValue()" class="NumberButton" style="border-radius: 30px;">
+            <input type="button" value="±" onClick="PlusMinusValue()" class="Button"> 
+            <input type="button" value="%" onClick="PercentageValue()" class="Button">
+            <input type="button" value="√" onClick="SquareRootValue()" class="Button"> 
+            <input type="button" value="=" onClick="CalculateValue()" class="Button" style="border-radius: 30px;">
         </p>
         <input type="button" value="C" onClick="ClearValue()" class="ClearButton">
         <input type="button" value="CE" onClick="ClearEntry()" class="ClearButton">

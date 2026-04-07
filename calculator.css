@@ -1,27 +1,4 @@
 @charset "UTF-8";
-.NumberButton{
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    font-size: 24px;
-    margin: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 6px 0 #b3b3b3, 0 8px 10px rgba(0, 0, 0, 0.2);
-}
-.NumberButton:hover{
-    background-color: #aaa;
-    border-color: #ccc;
-    color: #fff;
-}
-.NumberButton:active{
-    background-color: #aaa;
-    border-color: #000000;
-    color: #fff;
-    box-shadow: 0 3px 0 #b3b3b3, 0 4px 5px rgba(0, 0, 0, 0.2);
-    transform: translateY(2px);
-}
-
 .ClearButton{
     display: inline-block;
     width: 60px;
@@ -68,8 +45,8 @@
     background-color: #eee;
     border: 2px solid #000;
     color: #000;
-    height: 58px;
-    width: 58px;
+    height: 60px;
+    width: 60px;
     cursor: pointer;
     /* transition: .3s; */
     border-radius: 30px;
