@@ -70,12 +70,6 @@ function AppendSymbol(elem){
         v = document.getElementById('input').value + elem.value;
         s=1;
         e=0;
-        // c=0;
-        // n=0;
-        // s=1;
-        // d=0;
-        // z=0;
-        // p=0;
     } else if (s==0 && e==1){
         v = document.getElementById('input').value + elem.value;
         e=0;
@@ -115,7 +109,7 @@ document.getElementById('v').value = v;
     } else {
     result = eval(v + document.getElementById('input').value);
 }
-if (isNaN(result)||result==Infinity){
+if (isNaN(result)||result==Infinity||result==-Infinity){
     document.getElementById('input').value = '未定義';
     c=100;
     n=1;
@@ -133,7 +127,8 @@ if (isNaN(result)||result==Infinity){
     r=1;
 } else if (String(result).includes('.')){
     l= String(result).indexOf('.');
-    document.getElementById('input').value = String(result).slice(0,l+9);
+    result = Math.floor(result*100000000)/100000000;
+    document.getElementById('input').value = String(result);
     c=0;
     n=0;
     s=0;
@@ -209,9 +204,8 @@ function SquareRootValue(){
         r=1;
         radioDeselection();
     } else {
-    result = Math.sqrt(document.getElementById('input').value);
-    document.getElementById('input').value = String(result).slice(0,10);
-    v='';
+    result = Math.floor(Math.sqrt(document.getElementById('input').value)*100000000)/100000000;
+    document.getElementById('input').value = String(result);
     c=0;
     n=0;
     s=0;
