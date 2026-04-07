@@ -1,4 +1,9 @@
 @charset "UTF-8";
+
+body{
+  margin-left: 100px;
+  margin-top: 20px;
+}
 /* 背景 */
 .bg_pattern {
   position: fixed;
@@ -130,8 +135,17 @@ input[type="radio"]:hover + label{
 input[type="text"]{
     width: 300px;
     height: 60px;
-    font-size: 36px;
+    font-size: 28px;
     text-align: right;
     border-color: #000;
     background-color: #fff;
+}
+
+.HowToUse{
+  position: absolute;
+  top: 10px;
+  left: 560px;
+  font-size: 20px;
+  color: #000;
+    
 }

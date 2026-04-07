@@ -105,7 +105,7 @@ document.getElementById('v').value = v;
  function CalculateValue(){
     if (s==1&&String(v).slice(-1)=='/'){
         v='1/' + document.getElementById('input').value;
-        result = Math.floor(eval(v)*100000000)/100000000;
+        result = eval(v);
     } else {
     result = eval(v + document.getElementById('input').value);
 }
@@ -127,8 +127,8 @@ if (isNaN(result)||result==Infinity||result==-Infinity){
     r=1;
 } else if (String(result).includes('.')){
     l= String(result).indexOf('.');
-    result = Math.floor(result*100000000)/100000000;
-    document.getElementById('input').value = String(result);
+    result = Math.round(result*10000000000)/10000000000;    //丸め込み誤差回避
+    document.getElementById('input').value = String(result).slice(0,l+9);
     c=0;
     n=0;
     s=0;
@@ -204,8 +204,9 @@ function SquareRootValue(){
         r=1;
         radioDeselection();
     } else {
-    result = Math.floor(Math.sqrt(document.getElementById('input').value)*100000000)/100000000;
-    document.getElementById('input').value = String(result);
+    result = Math.floor(Math.sqrt(document.getElementById('input').value)*10000000000)/10000000000;    //丸め込み誤差回避
+    l= String(result).indexOf('.');
+    document.getElementById('input').value = String(result).slice(0,l+9);
     c=0;
     n=0;
     s=0;
@@ -241,3 +242,6 @@ function radioDeselection() {
     }
   }
   
+  function CopyValue(){
+    navigator.clipboard.writeText(document.getElementById('input').value);
+  }

@@ -14,7 +14,8 @@
         <!-- ボタンの作成 -->
         <form name="calculator">
 
-        <input type="text" id="input" value="0" size="15" readonly disabled><input type="text" id="v" value="" size="15" readonly disabled><br>
+        <input type="text" id="input" value="0" size="15" readonly disabled>
+        <input type="Button" value="コピー" onClick="CopyValue()" style="width: 60px; height: 40px; font-size: 12px; background-color: #fff; cursor: pointer; border-radius: 0px; color: #000;"><br>
         <input type="button" value="1" onClick="AppendValue(this)">
         <input type="button" value="2" onClick="AppendValue(this)">
         <input type="button" value="3" onClick="AppendValue(this)">
@@ -42,15 +43,15 @@
         <input type="button" value="±" onClick="PlusMinusValue()" > 
         <input type="button" value="%" onClick="PercentageValue()" >
         <input type="button" value="√" onClick="SquareRootValue()" > 
-        <input type="button" value="=" onClick="PressEqual()"  style="border-radius: 10px; height:140px; position: absolute; left: 243px; top: 375px;">
+        <input type="button" value="=" onClick="PressEqual()"  style="border-radius: 10px; height:140px; position: absolute; left: 332px; top: 388px;">
         <br>
         <input type="button" value="C" onClick="ClearValue()" class="ClearButton" style="width:140px">
         <input type="button" value="CE" onClick="ClearEntry()" class="ClearButton">
-        
+        <br><input type="text" id="v" value="" size="15" readonly disabled>
     </form>
         <!-- </center> -->
-        <!-- <div>
-            電卓の使い方
+        <div class="HowToUse">
+            基本の使い方
             <ul>
                 <li>最初に数字を入力</li>
                 <li>次に演算子（＋、－、×、÷）を入力</li>
@@ -62,8 +63,10 @@
                 <li>±：プラスマイナスの反転</li>
                 <li>％：パーセントの計算</li>
                 <li>√：平方根の計算</li>
+                <li>C：電卓をリセット</li>
+                <li>CE：入力をクリア</li>
             </ul>
-            </ul>
-        </div> -->
+            コピーボタンを押すと表示されている値をクリップボードにコピーできます
+        </div>
   </body>
 </html>
