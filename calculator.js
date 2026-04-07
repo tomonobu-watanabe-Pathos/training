@@ -243,5 +243,5 @@ function radioDeselection() {
   }
   
   function CopyValue(){
-    navigator.clipboard.writeText(document.getElementById('input').value);
+    navigator.clipboard.writeText(document.getElementById('input').value)
   }
