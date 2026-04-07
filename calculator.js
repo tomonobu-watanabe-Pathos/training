@@ -85,6 +85,29 @@ function AppendSymbol(elem){
     }
 }
 
+function AppendDivided(){
+    if (s==0 && e==0){
+        v += document.getElementById('input').value + elem.value;
+        c=0;
+        n=0;
+        s=1;
+        d=0;
+        z=0;
+        p=0;
+    } else if (s==0 && e==1){
+        v = document.getElementById('input').value + elem.value;
+        e=0;
+        c=0;
+        n=0;
+        s=1;
+        d=0;
+        z=0;
+        p=0;
+    } else if (s==1 && e==0){
+        v = v.slice(0, -1) + elem.value;
+    }
+}
+
 // Cを押した時の処理
 function ClearValue(){
 document.getElementById('input').value = '0';
@@ -107,7 +130,15 @@ radioDeselection();
     s=0;
     d=0;
     z=0;
-if (Math.abs(result)>9999999999){
+if (isNaN(result)||result==Infinity){
+    document.getElementById('input').value = '未定義';
+    c=100;
+    n=1;
+    s=1;
+    d=1;
+    z=1;
+    r=1;
+} else if (Math.abs(result)>9999999999){
     document.getElementById('input').value = '(E)'+String(result).slice(0,10)+'...';
     c=String(result).length;
     n=1;
