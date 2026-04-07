@@ -200,7 +200,7 @@ function SquareRootValue(){
         s=1;
         d=1;
         z=1;
-        p=0;
+        p=1;
         r=1;
         radioDeselection();
     } else {
@@ -241,7 +241,8 @@ function radioDeselection() {
       element.checked = false;
     }
   }
-  
-  function CopyValue(){
+
+//   コピーボタン
+function CopyValue(){
     navigator.clipboard.writeText(document.getElementById('input').value)
   }
