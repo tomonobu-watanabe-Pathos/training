@@ -37,7 +37,7 @@
         s=0;
         z=0;
     }
-    document.getElementById('v').value = v;
+    //document.getElementById('v').value = v;//
 }
 // 0を押した時の処理
 function AppendZero(){
@@ -56,7 +56,7 @@ function AppendZero(){
         n=0;
         s=0;
     }
-    document.getElementById('v').value = v;
+    //document.getElementById('v').value = v;//
 }
 
 function AppendZeroZero(){
@@ -82,7 +82,7 @@ function AppendSymbol(elem){
     } else if (s==1 && e==0){
         v = v.slice(0, -1) + elem.value;
     }
-    document.getElementById('v').value = v;
+    //document.getElementById('v').value = v;//
 }
 
 // Cを押した時の処理
@@ -98,7 +98,7 @@ e=0;
 p=0;
 r=0;
 radioDeselection();
-document.getElementById('v').value = v;
+//document.getElementById('v').value = v;//
 }
 
  // 計算処理
@@ -143,7 +143,7 @@ if (isNaN(result)||result==Infinity||result==-Infinity){
     z=0;
 }
 
-document.getElementById('v').value = v;
+//document.getElementById('v').value = v;//
 }
 
 // =を押した時の処理
@@ -186,7 +186,7 @@ function DecimalValue(){
         d=1;
         z=0;
     }
-    document.getElementById('v').value = v;
+    //document.getElementById('v').value = v;//
 }
 
 // √を押した時の処理
@@ -215,7 +215,7 @@ function SquareRootValue(){
     e=1;
     radioDeselection();
 }
-document.getElementById('v').value = v;
+//document.getElementById('v').value = v;//
 }
 // ±を押した時の処理
 function PlusMinusValue(){
@@ -224,7 +224,7 @@ function PlusMinusValue(){
     } else if (document.getElementById('input').value<0) {
         document.getElementById('input').value = document.getElementById('input').value.slice(1);
     }
-    document.getElementById('v').value = v;
+    //document.getElementById('v').value = v;//
 }
 // CEを押した時の処理
 function ClearEntry(){
@@ -232,7 +232,7 @@ function ClearEntry(){
     document.getElementById('input').value = '0';
     c=0;
     }
-    document.getElementById('v').value = v;
+    //document.getElementById('v').value = v;//
 }
 
 // ラジオボタンのキャンセル

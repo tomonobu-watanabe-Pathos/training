@@ -42,7 +42,7 @@ body{
 }
 
 /* ボタンの基本スタイル */
-input[type="button"]{
+.Button{
   display: inline-block;
   width: 60px;
   height: 60px;
@@ -52,12 +52,12 @@ input[type="button"]{
   cursor: pointer;
   box-shadow: 0 6px 0 #b3b3b3, 0 8px 10px rgba(0, 0, 0, 0.2);
 }
-input[type="button"]:hover{
+.Button:hover{
   background-color: #aaa;
   border-color: #ccc;
   color: #fff;
 }
-input[type="button"]:active{
+.Button:active{
   background-color: #aaa;
   border-color: #000;
   color: #fff;

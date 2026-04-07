@@ -13,41 +13,40 @@
         <!-- <center> -->
         <!-- ボタンの作成 -->
         <form name="calculator">
-
         <input type="text" id="input" value="0" size="15" readonly disabled>
-        <input type="Button" value="コピー" onClick="CopyValue()" style="width: 60px; height: 40px; font-size: 12px; background-color: #fff; cursor: pointer; border-radius: 0px; color: #000;"><br>
-        <input type="button" value="1" onClick="AppendValue(this)">
-        <input type="button" value="2" onClick="AppendValue(this)">
-        <input type="button" value="3" onClick="AppendValue(this)">
+        <input type="button" value="コピー" onClick="CopyValue()" style="width: 60px; height: 40px; font-size: 12px; background-color: #fff; cursor: pointer; border-radius: 0px; color: #000;"><br>
+        <input type="button" value="1" onClick="AppendValue(this)" class="Button">
+        <input type="button" value="2" onClick="AppendValue(this)" class="Button">
+        <input type="button" value="3" onClick="AppendValue(this)" class="Button">
         <input type="radio" id="plus" value="+" onClick="AppendSymbol(this)" name="symbol" class="SymbolButton">
         <label for="plus">＋</label>
         <br> 
-        <input type="button" value="4" onClick="AppendValue(this)">
-        <input type="button" value="5" onClick="AppendValue(this)">
-        <input type="button" value="6" onClick="AppendValue(this)">
+        <input type="button" value="4" onClick="AppendValue(this)" class="Button">
+        <input type="button" value="5" onClick="AppendValue(this)" class="Button">
+        <input type="button" value="6" onClick="AppendValue(this)" class="Button">
         <input type="radio" id="minus" value="-" onClick="AppendSymbol(this)" name="symbol" class="SymbolButton">
         <label for="minus">－</label>
         <br>
-        <input type="button" value="7" onClick="AppendValue(this)">
-        <input type="button" value="8" onClick="AppendValue(this)">
-        <input type="button" value="9" onClick="AppendValue(this)">
+        <input type="button" value="7" onClick="AppendValue(this)" class="Button">
+        <input type="button" value="8" onClick="AppendValue(this)" class="Button">
+        <input type="button" value="9" onClick="AppendValue(this)" class="Button">
         <input type="radio" id="multiply" value="*" onClick="AppendSymbol(this)" name="symbol" class="SymbolButton">
         <label for="multiply">×</label>
         <br>
-        <input type="button" value="0" onClick="AppendZero()">
-        <input type="button" value="00" onClick="AppendZeroZero()">
-        <input type="button" value="." onClick="DecimalValue(this)">
+        <input type="button" value="0" onClick="AppendZero()" class="Button">
+        <input type="button" value="00" onClick="AppendZeroZero()" class="Button">
+        <input type="button" value="." onClick="DecimalValue(this)" class="Button">
         <input type="radio" id="divide" value="/" onClick="AppendSymbol(this)" name="symbol" class="SymbolButton">
         <label for="divide">÷</label>
         <br>
-        <input type="button" value="±" onClick="PlusMinusValue()" > 
-        <input type="button" value="%" onClick="PercentageValue()" >
-        <input type="button" value="√" onClick="SquareRootValue()" > 
-        <input type="button" value="=" onClick="PressEqual()"  style="border-radius: 10px; height:140px; position: absolute; left: 332px; top: 388px;">
+        <input type="button" value="±" onClick="PlusMinusValue()" class="Button"> 
+        <input type="button" value="%" onClick="PercentageValue()" class="Button">
+        <input type="button" value="√" onClick="SquareRootValue()" class="Button"> 
+        <input type="button" value="=" onClick="PressEqual()" class="Button" style="border-radius: 10px; height:140px; position: absolute; left: 332px; top: 388px;">
         <br>
-        <input type="button" value="C" onClick="ClearValue()" class="ClearButton" style="width:140px">
+        <input type="button" value="C" onClick="ClearValue()" class="ClearButton" style="width:147px">
         <input type="button" value="CE" onClick="ClearEntry()" class="ClearButton">
-        <br><input type="text" id="v" value="" size="15" readonly disabled>
+        <!-- <br><input type="text" id="v" value="" size="15" readonly disabled> -->
     </form>
         <!-- </center> -->
         <div class="HowToUse">
@@ -64,7 +63,7 @@
                 <li>％：パーセントの計算</li>
                 <li>√：平方根の計算</li>
                 <li>C：電卓をリセット</li>
-                <li>CE：入力をクリア</li>
+                <li>CE：入力内容をクリア</li>
             </ul>
             コピーボタンを押すと表示されている値をクリップボードにコピーできます
         </div>
